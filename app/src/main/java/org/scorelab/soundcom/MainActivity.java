@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             startRun=savedInstanceState.getBoolean("startRun");
         }
 
-        startBtn = (ImageView)findViewById(R.id.button1);
+        startBtn = (ImageView)findViewById(R.id.imageViewLogo);
         startBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void onSaveInstanceState(Bundle saveInstanceState){
+    public void onSaveInstanceState(Bundle saveInstanceState) {
+        super.onSaveInstanceState(saveInstanceState);
         saveInstanceState.putInt("seconds", seconds);
         saveInstanceState.putBoolean("startRun", startRun);
     }
